@@ -1,3 +1,7 @@
 # october-leetcode-challenge
 
-[![Deepa's DEV Profile](https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg)](https://dev.to/qwertypool)
+<a href="https://dev.to/qwertypool">
+  <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Deepa's DEV Profile" height="60" width="60">
+</a>
+        
+
