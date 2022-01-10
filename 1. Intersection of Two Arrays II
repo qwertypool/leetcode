@@ -12,7 +12,7 @@ Output: [4,9]
 Explanation: [9,4] is also accepted.
 
 ===================================================================================================
-My approach:
+Brute Force approach:
 class Solution(object):
     def intersect(self, nums1, nums2):
         ls = []
@@ -24,8 +24,24 @@ class Solution(object):
         return ls
   
   ===================================================================================================
-  Approach 2:
+  Approach 2: Using collections.counter
   
+  import collections
   def intersect(self, nums1, nums2):
     a, b = map(collections.Counter, (nums1, nums2))
     return list((a & b).elements())
+=====================================================================================================
+Approach 3: Using Hash
+
+hash1 = {}
+result = []
+for i in nums1:
+	if i in hash1:
+		hash1[i]+=1
+	else:
+		hash1[i]=1
+for i in nums2:
+	if i in hash1 and hash1[i]>0:
+		result.append(i)
+		hash1[i]-=1
+return result
