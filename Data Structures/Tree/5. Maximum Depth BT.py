@@ -6,6 +6,24 @@ A binary tree's maximum depth is the number of nodes along the longest path from
 
 ================================================================================================
 ================================================================================================
+# Approach 1:
+
+
+class Solution(object):
+    def maxDepth(self, root):
+        """
+        :type root: TreeNode
+        :rtype: int
+        """
+        if root:
+            return 1 + max(self.maxDepth(root.left), self.maxDepth(root.right))
+        else:
+            return 0
+        
+
+================================================================================================
+================================================================================================
+#Approach 2:
 
 # Definition for a binary tree node.
 # class TreeNode(object):
