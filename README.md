@@ -1,7 +1,7 @@
-# leetcode-challenge
+# leetcode
 
-<a href="https://dev.to/qwertypool">
-  <img src="https://d2fltix0v2e0sb.cloudfront.net/dev-badge.svg" alt="Deepa's DEV Profile" height="100" width="100">
-</a>
-        
+## 1. Preorder - Inorder - Postorder
+
+![image](https://user-images.githubusercontent.com/36128196/149943290-bcbbddc3-e5db-466b-b16e-d2c64f80cf56.png)
+
 
