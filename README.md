@@ -10,4 +10,8 @@
 ![image](https://user-images.githubusercontent.com/36128196/150691176-7dc024b3-8637-42ac-ac01-9c3e2078d78b.png)
 
 
+## 3. Directed vs Undirected 
+Funny but cool!
+![image](https://user-images.githubusercontent.com/36128196/150693143-47fb9164-317b-41b5-88b9-4df5d1547935.png)
+
 
