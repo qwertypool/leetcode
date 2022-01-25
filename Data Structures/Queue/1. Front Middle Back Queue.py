@@ -106,7 +106,39 @@ class FrontMiddleBackQueue(object):
 # param_6 = obj.popBack()
 
 ============================================================================================================================================
+USING SLICING & DEQUE
 ============================================================================================================================================
 
 
+class FrontMiddleBackQueue:
 
+    def __init__(self):
+        self.deque = []
+
+    def pushFront(self, val: int) -> None:
+        self.deque[0:0] = [val]
+
+    def pushMiddle(self, val: int) -> None:
+        mid = len(self.deque)//2
+        self.deque[mid:mid] = [val]
+
+    def pushBack(self, val: int) -> None:
+        self.deque.append(val)
+
+    def popFront(self) -> int:
+        if not self.deque:
+            return -1
+        res = self.deque[0]
+        self.deque[0:1] = []
+        return res
+
+    def popMiddle(self) -> int:
+        if not self.deque:
+            return -1
+        mid = (len(self.deque) - 1)//2
+        res = self.deque[mid]
+        self.deque[mid:mid+1] = []
+        return res
+
+    def popBack(self) -> int:
+        return self.deque.pop() if self.deque else -1
