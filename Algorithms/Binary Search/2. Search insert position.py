@@ -25,24 +25,14 @@ class Solution(object):
         return bisect.bisect_left(nums, target)
   
 ==========================================
-class Solution(object):
-    def searchInsert(self, nums, target):
-        """
-        :type nums: List[int]
-        :type target: int
-        :rtype: int
-        """
-        l, u = 0, len(nums) -1
-        
-        while l <= u:
-            mid = l + (u-l)//2
-            if nums[mid] == target:
-                return mid
-            elif nums[mid] < target:
-                l = mid + 1
+class Solution:
+    def searchInsert(self, nums: List[int], target: int) -> int:
+        low, high = 0, len(nums)
+        while low < high:
+            mid = (low + high) // 2
+            if target > nums[mid]:
+                low = mid + 1
             else:
-                u = mid - 1
-        
-           
-        return bisect.bisect_left(nums, target)
+                high = mid
+        return low
         
