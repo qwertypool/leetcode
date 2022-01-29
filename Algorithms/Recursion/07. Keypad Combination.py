@@ -27,3 +27,26 @@ class Solution(object):
         start = self.letterCombinations(digits[:-1])
         additional = combo[digits[-1]]
         return [i+j for i in start for j in additional]
+
+==================================================================
+#Iterative solution
+  class Solution(object):
+    def letterCombinations(self, digits):
+        """
+        :type digits: str
+        :rtype: List[str]
+        """
+        combo = {
+            '2':'abc',
+            '3':'def',
+            '4':'ghi',
+            '5':'jkl',
+            '6':'mno',
+            '7':'pqrs',
+            '8':'tuv',
+            '9':'wxyz'
+        }
+        cmb = [''] if digits else []
+        for d in digits:
+            cmb = [i+j for i in cmb for j in combo[d]] 
+        return cmb
