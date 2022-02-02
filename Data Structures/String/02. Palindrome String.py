@@ -28,3 +28,37 @@ When a character moves out from left of the window, we add 1 to that character c
 So once we see all zeros in the map, meaning equal numbers of every characters between s1 and the substring in the sliding window, we know the answer is true.
 
 ================================================================================================================================
+class Solution(object):
+    def checkInclusion(self, s1, s2):
+        """
+        :type s1: str
+        :type s2: str
+        :rtype: bool
+        """
+        arr = [0]*26
+        sl1, sl2 = len(s1), len(s2)
+        if sl1>sl2:
+            return False
+        
+        for i in range(sl1):
+            index = ord(s1[i]) - 97
+            arr[index] += 1
+        for i in range(sl1):
+            index = ord(s2[i]) - 97
+            arr[index] -= 1
+        if self.isPermutation(arr) == True:
+                return True
+        for i in range(sl1,sl2):
+            index = ord(s2[i]) - 97
+            arr[index] -= 1
+            index = ord(s2[i-sl1]) - 97
+            arr[index] += 1
+            if self.isPermutation(arr) == True:
+                return True
+        return False
+    
+    def isPermutation(self,arr):
+        for i in arr:
+            if i != 0:
+                return False
+        return True
